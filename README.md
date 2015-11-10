@@ -9,13 +9,13 @@ On your project folder:
 
 ## Usage
 
-In <server.js>:
+In <code>server.js</code>:
 
 	var rawBodyParser = require('raw-body-parser');
 
 	app.use(rawBodyParser());
 
-In <route.js>:
+In <code>route.js</code>:
 
 	var rawBody = req.rawBody.toString('utf8');
 
