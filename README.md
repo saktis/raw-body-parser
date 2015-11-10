@@ -1,5 +1,5 @@
 # raw-body-parser
-Parse raw body (only) from Node js request. This API is intended to be used without body-parser, json, and urlencoded.
+Retrieve raw body (only) from Node js request as a Buffer. This API is intended to be used without body-parser, json, and urlencoded.
 
 ## Installation
 
@@ -9,7 +9,15 @@ On your project folder:
 
 ## Usage
 
-var rawBodyParser
+In <<server.js>>:
+
+	var rawBodyParser = require('raw-body-parser');
+
+	app.use(rawBodyParser());
+
+In <<route.js>>:
+
+	var rawBody = req.rawBody.toString('utf8');
 
 ## License
 
