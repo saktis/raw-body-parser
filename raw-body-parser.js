@@ -4,13 +4,14 @@
 exports = module.exports = function() {
 
 	return function middleware(req, res, next) {
-		req.rawBody = new Buffer(0);
+		var buffers = [];
 	
 		req.on('data', function(chunk) {
-			req.rawBody = Buffer.concat([req.rawBody, chunk]);
+			buffers.push(chunk);
 		});
 	
 		req.on('end', function() {
+			req.rawBody = Buffer.concat(buffers);
 			next();
 		});
 	};
@@ -20,4 +21,4 @@ exports = module.exports = function() {
 /**
  * Initial version.
  */
-exports.version = '0.0.1';
+exports.version = '0.0.2';

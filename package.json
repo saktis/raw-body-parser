@@ -1,7 +1,7 @@
 {
   "name": "raw-body-parser",
-  "version": "0.0.1",
-  "description": "Retrieve raw body (only) from Node js request as a Buffer. This API is intended to be used without body-parser, json, and urlencoded.",
+  "version": "0.0.2",
+  "description": "A lightweight middleware to retrieve raw body (only) from Node js Request as a Buffer. This API is intended to be used without body-parser, json, and urlencoded.",
   "main": "raw-body-parser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
