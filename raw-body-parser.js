@@ -2,7 +2,8 @@
  * Simple module to retrieve raw body part of a request.
  */
 exports = module.exports = function() {
-	return function(req, res, next) {
+
+	return function middleware(req, res, next) {
 		req.rawBody = new Buffer(0);
 	
 		req.on('data', function(chunk) {
@@ -13,6 +14,7 @@ exports = module.exports = function() {
 			next();
 		});
 	};
+
 };
 
 /**
